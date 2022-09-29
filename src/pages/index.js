@@ -1,5 +1,6 @@
 import Head from "next/head"
 import About from '../components/About'
+import Contact from "../components/Contact"
 import ProjectList from '../components/Projects/ProjectList'
 
 export default function IndexPage() {
@@ -7,6 +8,7 @@ export default function IndexPage() {
     <>
       <About />
       <ProjectList />
+      <Contact />
     </>
   )
 }

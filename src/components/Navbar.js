@@ -12,18 +12,18 @@ const Navbar = () => {
             <li>
               <Link href="/#about" scroll={false}>
                 <a className="hover:text-yellow-200">
-                  About
+                  Sobre mi
                 </a>
               </Link>
             </li>
             <li>
               <Link href="/#projects" scroll={false}>
-                <a className="hover:text-yellow-200">Projects</a>
+                <a className="hover:text-yellow-200">Proyectos</a>
               </Link>
             </li>
             <li>
               <Link href="/#contact" scroll={false}>
-                <a className="hover:text-yellow-200">Contact</a>
+                <a className="hover:text-yellow-200">Contacto</a>
               </Link>
             </li>
             <li>

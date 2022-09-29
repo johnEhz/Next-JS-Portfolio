@@ -6,7 +6,7 @@ import { TbBrandNextjs, TbBrandTailwind } from "react-icons/tb";
 
 const Footer = () => {
   return (
-    <footer className="bg-neutral-900 p-8 space-y-5 text-center text-slate-400 shadow-lg font-mono border-t-2">
+    <footer className="bg-neutral-900 p-8 space-y-5 text-center text-slate-400 shadow-lg font-mono">
       <ul className="flex space-x-24 w-full justify-center">
         <li className="hover:text-yellow-200 ease-in duration-200">
           <a
