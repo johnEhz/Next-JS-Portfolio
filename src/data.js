@@ -1,38 +1,29 @@
 export const projectList = [
     {
         id: "0",
-        title: "JS SQL project",
-        description: "El valor 100 en este ejemplo es la longitud de letras que tendrá este texto generado. Podemos cambiarlo por otro valor para adaptarlo a lo que necesitemos.",
-        img: "https://www.xtrafondos.com/wallpapers/resized/paisaje-digital-en-atardecer-5846.jpg?s=large",
-        date: "09/25/2022",
-        status: false,
-        techs: ['ReactJS', 'TailwindCSS']
+        title: "Random pass generator!",
+        description: "Aplicación creada para generar contraseñas completamente aleatorias con cierto nivel de configuración y grandes niveles de seguridad!, proyecto creado y desarrollado en base a reto de la página FronterMentor.io nivel intermedio.",
+        img: "/../public/passGenerator.PNG",
+        date: "09/28/2022",
+        status: true,
+        techs: ['React', 'TailwindCSS', 'TS']
     },
     {
         id: "1",
-        title: "React project",
-        description: "El valor 100 en este ejemplo es la longitud de letras que tendrá este texto generado. Podemos cambiarlo por otro valor para adaptarlo a lo que necesitemos.",
-        img: "https://www.xtrafondos.com/wallpapers/resized/paisaje-digital-en-atardecer-5846.jpg?s=large",
-        date: "08/20/2022",
-        status: false,
-        techs: ['ReactJS', 'NextJS']
+        title: "Task management APP!",
+        description: "Administra tus actividades y tareas diarias de una forma única con mi aplicación para gestionar tareas!, puedes realizar operaciones para crear, eliminar o modificar tus tareas siempre que lo requieras.",
+        img: "/../public/TaskAPP.PNG",
+        date: "09/20/2022",
+        status: true,
+        techs: ['React', 'CSS', 'NodeJS', 'MongoDB']
     },
     {
         id: "2",
-        title: "Tailwind CSS project",
-        description: "letras que tendrá este texto generado. Podemos cambiarlo por otro valor para adaptarlo a lo que necesitemos.",
-        img: "https://www.xtrafondos.com/wallpapers/resized/paisaje-digital-en-atardecer-5846.jpg?s=large",
-        date: "09/18/2022",
+        title: "GFuture Control panel E-Commerce!",
+        description: "Aplicación web para toda la administración, gestión de productos y usuarios de un E-Commerce llamado G-Future!",
+        img: "/../public/ECommerce.jpeg",
+        date: "10/03/2022",
         status: false,
-        techs: ['JS', 'NodeJS', 'MongoDB']
-    },
-    {
-        id: "3",
-        title: "Next JS project",
-        description: "El valor 100 en este ejemplo es la longitud de letras que tendrá este texto generado. Podemos cambiarlo por otro valor para adaptarlo a lo que necesitemos.",
-        img: "https://www.xtrafondos.com/wallpapers/resized/paisaje-digital-en-atardecer-5846.jpg?s=large",
-        date: "07/25/2019",
-        status: false,
-        techs: ['ReactJS', 'TailwindCss', 'Redux']
+        techs: ['React', 'TailwindCSS', 'Redux']
     }
 ]
