@@ -1,7 +1,8 @@
 import emailjs from "emailjs-com";
 
 export default function sendMail(form) {
-    emailjs.sendForm("service_y9de4ig", "template_vgujkob", form, "r7e6I_TnljlLgCTtO")
+    const { SERVICE_ID,  TEMPLATE_ID, API_KEY_ID} = process.env;
+    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, API_KEY_ID)
     .then((result) => {
         console.log(result.text);
       },
