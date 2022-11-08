@@ -5,7 +5,7 @@ import CustomBtn from '../components/CustomBtn'
 export default function Custom404() {
     const router = useRouter();
     return (
-        <div className="flex text-stone-200 bg-neutral-800 justify-center items-center h-screen">
+        <div className="flex text-stone-200 bg-neutral-900 justify-center items-center h-screen">
             <div className='space-y-4 text-center'>
                 <h1 className="text-9xl font-semibold">404</h1>
                 <h1 className="text-3xl">
