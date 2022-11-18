@@ -12,11 +12,12 @@ const About = () => {
         className="bg-neutral-800 flex flex-col items-center py-20 p-6 space-y-20 w-full"
       >
         <Image
-          className="bg-white max-w-2xl rounded-full z-0"
-          src="https://w7.pngwing.com/pngs/527/663/png-transparent-logo-person-user-person-icon-rectangle-photography-computer-wallpaper.png"
-          alt="Some alt"
-          width={350}
-          height={350}
+          loading="lazy"
+          className="bg-white max-w-2xl rounded-full z-0 shadow-md shadow-black"
+          src="/images/me.jpg"
+          alt="John Hernandez"
+          width={400}
+          height={400}
         ></Image>
         <div className="text-3xl text-slate-300 font-sans font-semibold space-y-3 tracking-wider max-w-xl">
           <h1 className="font-serif font-normal">Soy John Hernández</h1>

@@ -2,20 +2,34 @@ import React, { useState, useRef } from "react";
 import CustomBtn from "../components/CustomBtn";
 import { BiMailSend } from "react-icons/bi";
 import { toast } from "react-toastify";
-import SendMail from '../services/SendMail'
+import SendMail from "../services/SendMail";
+
+//Captcha
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
+  const [corretUser, setCorrectUser] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      SendMail(e.target)
-      toast.success('Email enviado satisfactoriamente!')
-    } catch (error) {
-      toast.error('Algo salió mal al intentar enviar el email...')
+    if (corretUser) {
+      try {
+        SendMail(e.target);
+        toast.success("Email enviado satisfactoriamente!\nPronto te contestare 😃");
+      } catch (error) {
+        toast.error("Algo salió mal al intentar enviar el email...");
+        console.log(error);
+      }
+      setCorrectUser(false);
+      e.target.reset();
+    } else {
+      toast.warn("Complete la verificación...");
     }
-    e.target.reset();
-  }
+  };
+
+  const changeCaptcha = (e) => {
+    e ? setCorrectUser(true) : setCorrectUser(false);
+  };
 
   return (
     <section
@@ -31,14 +45,14 @@ const Contact = () => {
       >
         <input
           className="px-3 py-3 rounded-sm bg-neutral-200 w-full focus:outline-none"
-          placeholder="Tunombre"
+          placeholder="Tu nombre"
           required
           type="text"
           name="from_name"
         />
         <input
           className="px-4 py-3 rounded-sm bg-neutral-200 w-full focus:outline-none"
-          placeholder="yourmail@gmail.com"
+          placeholder="yourmail@mail.com"
           required
           name="from_mail"
           type="email"
@@ -55,8 +69,18 @@ const Contact = () => {
           Enviar
           <BiMailSend size={28} />
         </button>
+        <div className="recapcha w-full flex justify-center">
+          <ReCAPTCHA
+            sitekey="6Lc0hhgjAAAAADoO8Nm9J_a9OpWktTh3D3vnY5S5"
+            onChange={changeCaptcha}
+            theme="dark"
+          />
+        </div>
       </form>
-      <h2 className="text-neutral-400">Mi emaill: <span className="text-yellow-400 text-sm">johnhdz.160@gmail.com</span></h2>
+      <h2 className="text-neutral-400">
+        Mi emaill:{" "}
+        <span className="text-yellow-400 text-sm">johnhdz.160@gmail.com</span>
+      </h2>
     </section>
   );
 };
