@@ -44,6 +44,7 @@ const ProjectCard = ({ project }) => {
           height={280}
           loading="lazy"
           onClick={() => setShowDetail(true)}
+          placeholder="blur"
         ></Image>
         <div
           id="card-body"

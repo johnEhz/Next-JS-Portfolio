@@ -18,6 +18,7 @@ const About = () => {
           alt="John Hernandez"
           width={400}
           height={400}
+          placeholder="blur"
         ></Image>
         <div className="text-3xl text-slate-300 font-sans font-semibold space-y-3 tracking-wider max-w-xl">
           <h1 className="font-serif font-normal">Soy John Hernández</h1>
