@@ -9,7 +9,7 @@ export default function sendMail(form) {
         console.log(result.text);
       },
       (error) => {
-        console.log(error.text);
+        console.error(error.text);
       }
     );
 }

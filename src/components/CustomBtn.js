@@ -1,15 +1,21 @@
-import React from 'react'
+import React from "react";
 
-const CustomBtn = ({ w, children, text, color='bg-yellow-300', handleClick=null, type='button' }) => {
-    return (
-        <button
-            type={type}
-            onClick={handleClick}
-            className={`hover:bg-yellow-200 flex ${color} text-stone-800 w-${w} p-2 rounded-md italic font-normal gap-x-2 text-sm items-center h-8`}>
-            {children}
-            {text}
-        </button>
-  )
-}
+const CustomBtn = ({
+  children,
+  text,
+  handleClick = null,
+  type = "button",
+}) => {
+  return (
+    <button
+      type={type}
+      onClick={handleClick}
+      className={`text-md bg-black dark:bg-white text-white dark:text-black sm:w-44 max-w-smff w-full h-11 rounded-md border border-transparent transition-colors hover:text-black dark:hover:text-white hover:bg-white dark:hover:bg-black hover:border-black dark:hover:border-white font-semibold tracking-wide flex flex-row items-center justify-center gap-4`}
+    >
+      {children}
+      {text}
+    </button>
+  );
+};
 
 export default CustomBtn;

@@ -1,6 +1,4 @@
-import React, { useState, useRef } from "react";
-import CustomBtn from "../components/CustomBtn";
-import { BiMailSend } from "react-icons/bi";
+import React, { useState } from "react";
 import { toast } from "react-toastify";
 import SendMail from "../services/SendMail";
 
@@ -15,15 +13,17 @@ const Contact = () => {
     if (corretUser) {
       try {
         SendMail(e.target);
-        toast.success("Email enviado satisfactoriamente!\nPronto te contestare 😃");
+        toast.success(
+          "Email enviado satisfactoriamente!\nPronto te contestare."
+        );
       } catch (error) {
-        toast.error("Algo salió mal al intentar enviar el email...");
+        toast.error("Algo salió mal al intentar enviar el email.\n");
         console.log(error);
       }
       setCorrectUser(false);
       e.target.reset();
     } else {
-      toast.warn("Complete la verificación...");
+      toast.warn("Por favor, Complete la verificación 🤖.");
     }
   };
 
@@ -34,53 +34,52 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="text-center content-center grid bg-neutral-900 py-20 p-6"
+      className="bg-gray-50 dark:bg-black border-b border-gray-200 dark:border-neutral-800 text-center content-center flex flex-col items-center justify-center py-16 gap-8"
     >
-      <h1 className="font-serif font-normal text-3xl text-yellow-200 mb-12">
-        {`Contactame !`}
-      </h1>
-      <form
-        className="flex flex-col bg-neutral-800 gap-6 max-w-2xl w-full m-auto shadow-xl drop-shadow-md p-6 rounded mb-8"
-        onSubmit={handleSubmit}
-      >
-        <input
-          className="px-3 py-3 rounded-sm bg-neutral-200 w-full focus:outline-none"
-          placeholder="Tu nombre"
-          required
-          type="text"
-          name="from_name"
-        />
-        <input
-          className="px-4 py-3 rounded-sm bg-neutral-200 w-full focus:outline-none"
-          placeholder="yourmail@mail.com"
-          required
-          name="from_mail"
-          type="email"
-        />
-        <textarea
-          className="px-4 py-3 rounded-sm bg-neutral-200 w-full focus:outline-none"
-          placeholder="Mensaje"
-          rows={4}
-          required
-          name="message"
-          type="text"
-        />
-        <button className="flex gap-2 bg-yellow-300 hover:bg-yellow-400 w-full p-2 justify-center items-center font-normal rounded-sm text-base self-center">
-          Enviar
-          <BiMailSend size={28} />
-        </button>
-        <div className="recapcha w-full flex justify-center">
+      <div className="grid grid-cols-1 px-5 gap-5 max-w-3xl w-full">
+        <h1 className="text-4xl mb-10 font-bold tracking-tighter text-neutral-700 dark:text-gray-200 px-4 text-center">
+          Contactame
+        </h1>
+        <form
+          className="flex flex-col gap-3 w-full h-full text-lg text-neutral-800 dark:text-neutral-200"
+          onSubmit={handleSubmit}
+        >
+          <input
+            className="px-3 py-3 w-full focus:outline-none border-b-2 border-neutral-400 dark:border-neutral-700 bg-transparent placeholder:text-sm"
+            placeholder="NOMBRE"
+            required
+            type="text"
+            name="from_name"
+          />
+          <input
+            className="px-4 py-3 w-full focus:outline-none border-b-2 border-neutral-400 dark:border-neutral-700 bg-transparent placeholder:text-sm"
+            placeholder="EMAIL"
+            required
+            name="from_mail"
+            type="email"
+          />
+          <textarea
+            className="px-4 py-3 w-full focus:outline-none h-48 border-b-2 border-neutral-400 dark:border-neutral-700 bg-transparent placeholder:text-sm"
+            placeholder="MENSAJE"
+            rows={4}
+            required
+            name="message"
+            type="text"
+          />
+          <div className="w-full flex justify-center sm:justify-end pt-5">
+            <button className="font-semibold sm:w-44 w-full py-2 border-b-2 border-blue-600 hover:bg-blue-600 hover:text-white transition-colors hover:rounded-md active:bg-blue-700 dark:text-white">
+              Enviar mensaje
+            </button>
+          </div>
+        </form>
+      </div>
+      <div className="recapcha w-full flex justify-center">
           <ReCAPTCHA
-            sitekey="6Lc0hhgjAAAAADoO8Nm9J_a9OpWktTh3D3vnY5S5"
+            sitekey={process.env.SITE_KEY}
             onChange={changeCaptcha}
-            theme="dark"
+            theme="light"
           />
         </div>
-      </form>
-      <h2 className="text-neutral-400">
-        Mi emaill:{" "}
-        <span className="text-yellow-400 text-sm">johnhdz.160@gmail.com</span>
-      </h2>
     </section>
   );
 };

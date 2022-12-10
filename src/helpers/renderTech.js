@@ -3,7 +3,7 @@ import { FaReact } from "react-icons/fa";
 import { SiRedux, SiMongodb, SiTypescript } from "react-icons/si";
 import { DiNodejsSmall, DiJavascript1, DiCss3Full } from "react-icons/di";
 
-const renderTech = (tech, size, title = "Tech") => {
+const renderTech = ({tech, size, title = "Tech"}) => {
     switch (tech) {
       case "React":
         return <FaReact size={size} title={title} />;

@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
     return (
         <>
             <Navbar />
-            <main className='scroll-smooth'>
+            <main className='flex flex-col'>
                 {children}
             </main>
             <Footer />

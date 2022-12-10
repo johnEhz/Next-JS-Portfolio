@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { projectList } from "../../data";
-import { HiOutlineCode } from 'react-icons/hi'
+import { HiOutlineCode } from "react-icons/hi";
 
-import ProjectCard from '../Projects/ProjectCard'
+import ProjectCard from "../Projects/ProjectCard";
 
 const ProjectList = () => {
   const [projects, setProjects] = useState(projectList);
@@ -10,19 +10,21 @@ const ProjectList = () => {
   return (
     <section
       id="projects"
-      className="bg-neutral-800 py-20 p-6 items-center flex flex-col"
+      className="dark:bg-[#111111] border-b border-gray-200 dark:border-neutral-800 py-14 px-4 items-center flex flex-col"
     >
-      <h1 className="font-serif font-normal text-3xl tracking-wider items-center justify-center mb-12 text-yellow-200 flex gap-3">
-        {projects.length} Proyectos y más en en desarrollo!
-        <HiOutlineCode size={35}/>
+      <h1 className="text-4xl mb-10 font-bold tracking-tighter text-neutral-700 dark:text-gray-200 px-4 text-center">
+        Proyectos
       </h1>
-      <div id="projectList" className="flex flex-wrap gap-12 justify-center max-w-7xl">
-        {
-          projects.map(project => (
-            <ProjectCard key={project.id} project={project} />
-          ))
-        }
-      </div>
+      <ul
+        id="projectList"
+        className="grid grd-cols-1 xl:grid-cols-2 gap-12 max-w-8xl 2xl:px-5"
+      >
+        {projects.map((project) => (
+          <li key={project.id}>
+            <ProjectCard project={project} />
+          </li>
+        ))}
+      </ul>
     </section>
   );
 };

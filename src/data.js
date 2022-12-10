@@ -1,35 +1,30 @@
 export const projectList = [
   {
     id: "0",
-    title: "Random pass generator!",
+    title: "Generador de contraseñas aleatorias",
     description:
       "Aplicación creada para generar contraseñas completamente aleatorias con cierto nivel de configuración y grandes niveles de seguridad!, proyecto creado y desarrollado en base a reto de la página FronterMentor.io nivel intermedio.",
     imgs: ["/projects/passGenerator.PNG"],
-    date: "09/28/2022",
-    status: true,
     techs: ["React", "TailwindCSS", "TS"],
     githubLink: "https://github.com/johnEhz/React-TS-PasswordGenerator"
   },
   {
     id: "1",
-    title: "Task management APP!",
+    title: "Aplicación para gestionar tus tareas",
     description:
       "Administra tus actividades y tareas diarias de una forma única con mi aplicación para gestionar tareas!, puedes realizar operaciones para crear, eliminar o modificar tus tareas siempre que lo requieras.",
     imgs: ["/projects/TaskAPP/taskList.PNG"],
-    date: "09/20/2022",
-    status: true,
     techs: ["React", "CSS", "NodeJS", "MongoDB"],
     githubLink: "https://github.com/johnEhz/React-TS-TasksManager"
   },
   {
     id: "2",
-    title: "GFuture Control panel E-Commerce!",
+    title: "E-Commerce dashboard login",
     description:
       "Aplicación web para toda la administración, gestión de productos y usuarios de un E-Commerce llamado G-Future!",
     imgs: ["/projects/ECommerce.jpeg"],
-    date: "10/03/2022",
-    status: false,
     techs: ["React", "TailwindCSS", "Redux"],
+    githubLink: "https://github.com/johnEhz/React-TS-TasksManager"
   },
   {
     id: "3",
@@ -37,8 +32,6 @@ export const projectList = [
     description:
       "Aplicación web para realizar busqueda de usuarios registrados a GitHub con uso de API.",
     imgs: ["/projects/devFinder.PNG"],
-    date: "10/06/2022",
-    status: true,
     techs: ["React", "TS"],
     githubLink: "https://github.com/johnEhz/Github-users-search"
   },
@@ -47,17 +40,17 @@ export const projectList = [
 export const techList = [
   {
     id: "0",
-    name: "React",
+    name: "ReactJS",
     file: "/techs/react.svg",
   },
   {
     id: "1",
-    name: "JS",
+    name: "JavaScript",
     file: "/techs/js.svg",
   },
   {
     id: "2",
-    name: "TS",
+    name: "TypeScript",
     file: "/techs/ts.svg",
   },
   {
@@ -77,17 +70,17 @@ export const techList = [
   },
   {
     id: "6",
-    name: "Python",
+    name: "Python 3",
     file: "/techs/python.svg",
   },
   {
     id: "7",
-    name: "C#",
+    name: "C Sharp",
     file: "/techs/c-sharp.svg"
   },
   {
     id: "8",
-    name: "SQL",
+    name: "SQL Databases",
     file: "/techs/sql.svg",
   }
 ];
