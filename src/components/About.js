@@ -33,7 +33,7 @@ const About = () => {
           <h1 className="text-4xl font-bold tracking-tighter text-neutral-700 dark:text-gray-200 px-4 w-full text-center">
             Sobre mi
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 md:px-5 gap-2 sm:gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:px-5 gap-5 sm:gap-5">
             <div className="w-full flex justify-center">
               <div className="w-full flex justify-center max-w-md">
                 <Image

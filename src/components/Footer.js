@@ -24,13 +24,6 @@ const Footer = () => {
           />
         </li>
         <li className="dark:hover:text-white hover:text-black ease-in duration-200">
-          <FooterSocial
-            SocialIcon={FaTwitter}
-            title="Twitter"
-            href="https://twitter.com/JohzHz"
-          />
-        </li>
-        <li className="dark:hover:text-white hover:text-black ease-in duration-200">
           <a href="mailto:johnhdz.160@gmail.com" title="Mail">
             <SiGmail size={28} />
           </a>
