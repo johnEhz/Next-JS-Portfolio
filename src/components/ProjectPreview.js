@@ -9,9 +9,15 @@ const ProjectPreview = ({ show, toggleShowPreview, project }) => {
         <>
           <div className="w-full h-screen fixed bg-black bg-opacity-70 z-50 inset-0 p-8">
             <div className="w-full h-full gap-8 flex flex-col justify-center items-center">
-              <h1 className="text-white uppercase font-bold tracking-wider text-xl text-center">
-                {project.title}
-              </h1>
+              <div className="flex flex-row items-center">
+                <h1 className="text-white uppercase font-bold tracking-wider text-xl text-center">
+                  {project.title}
+                </h1>
+                <button onClick={toggleShowPreview} className="text-red-500 px-2 rounded-full text-2xl font-bold">
+                  X
+                </button>
+              </div>
+
               <div className="max-w-screen overflow-x-auto">
                 <ul className="">
                   {project.imgs.map((imgSource, idx) => (
