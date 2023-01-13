@@ -1,11 +1,8 @@
-import React, { useState } from "react";
-import { techList } from "../../data";
+import React from "react";
 import Tech from "./Tech";
-
+import techs from '../../json/techs.json'
 
 const TechList = () => {
-  const [techs, setTechs] = useState(techList);
-
   return (
     <section
       id="techs"
@@ -27,5 +24,6 @@ const TechList = () => {
     </section>
   );
 };
+
 
 export default TechList;
