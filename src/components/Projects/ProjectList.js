@@ -1,12 +1,8 @@
-import React, { useState } from "react";
-import { projectList } from "../../data";
-import { HiOutlineCode } from "react-icons/hi";
-
+import React from "react";
 import ProjectCard from "../Projects/ProjectCard";
+import projects from '../../json/projects.json'
 
 const ProjectList = () => {
-  const [projects, setProjects] = useState(projectList);
-
   return (
     <section
       id="projects"
@@ -28,5 +24,6 @@ const ProjectList = () => {
     </section>
   );
 };
+
 
 export default ProjectList;
