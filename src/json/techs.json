@@ -1,0 +1,47 @@
+[
+    {
+        "id": "0",
+        "name": "ReactJS",
+        "file": "/techs/react.svg"
+    },
+    {
+        "id": "1",
+        "name": "JavaScript",
+        "file": "/techs/js.svg"
+    },
+    {
+        "id": "2",
+        "name": "TypeScript",
+        "file": "/techs/ts.svg"
+    },
+    {
+        "id": "3",
+        "name": "NodeJS",
+        "file": "/techs/nodejs.svg"
+    },
+    {
+        "id": "4",
+        "name": "HTML",
+        "file": "/techs/html.svg"
+    },
+    {
+        "id": "5",
+        "name": "CSS",
+        "file": "/techs/css.svg"
+    },
+    {
+        "id": "6",
+        "name": "Python 3",
+        "file": "/techs/python.svg"
+    },
+    {
+        "id": "7",
+        "name": "C Sharp",
+        "file": "/techs/c-sharp.svg"
+    },
+    {
+        "id": "8",
+        "name": "SQL Databases",
+        "file": "/techs/sql.svg"
+    }
+]
