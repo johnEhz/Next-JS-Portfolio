@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { FaLinkedin, FaGithub, FaRegAddressBook } from "react-icons/fa";
-import aboutImage from "../../public/images/me.jpg";
+//import aboutImage from "../../public/images/me.jpg";
 import Image from "next/image";
 
 //Typed Library
@@ -36,12 +36,13 @@ const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 md:px-5 gap-5 sm:gap-5">
             <div className="w-full flex justify-center">
               <div className="w-full flex justify-center max-w-md">
-                <Image
+                {/* <Image
                   className="bg-white z-0 shadow-xl shadow-black rounded-lg border border-gray-600 h-auto"
                   src={aboutImage}
                   alt="John Hernandez"
                   priority
-                />
+                /> */}
+                <div>Updating...</div>
               </div>
             </div>
             <div className="flex flex-col gap-6 md:px-3 md:py-4 max-w-xl">
