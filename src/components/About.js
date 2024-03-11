@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { FaLinkedin, FaGithub, FaRegAddressBook } from "react-icons/fa";
-//import aboutImage from "../../public/images/me.jpg";
+import aboutImage from "../../public/images/me.jpeg";
 import Image from "next/image";
 
 //Typed Library
@@ -11,7 +11,7 @@ const About = () => {
 
   useEffect(() => {
     const typed = new Typed(element.current, {
-      strings: ["Desarrollador Front-End.", "Ingeniero de Software."],
+      strings: ["Desarrollador de Software", "Ingeniero de Software."],
       startDelay: 300,
       typeSpeed: 100,
       backSpeed: 80,
@@ -35,14 +35,13 @@ const About = () => {
           </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 md:px-5 gap-5 sm:gap-5">
             <div className="w-full flex justify-center">
-              <div className="w-full flex justify-center max-w-md">
-                {/* <Image
-                  className="bg-white z-0 shadow-xl shadow-black rounded-lg border border-gray-600 h-auto"
+              <div className="justify-center max-h-[500px] max-w-[250px] m-auto">
+                <Image
+                  className="bg-green-400 z-0 rounded-lg border border-gray-600"
                   src={aboutImage}
                   alt="John Hernandez"
                   priority
-                /> */}
-                <div>Updating...</div>
+                />
               </div>
             </div>
             <div className="flex flex-col gap-6 md:px-3 md:py-4 max-w-xl">
@@ -57,7 +56,7 @@ const About = () => {
                   </h1>
                 </div>
                 <p className="text-lg font-normal text-neutral-800 dark:text-gray-300">
-                  Desarrollador de Software Front-End con 21 años de edad
+                  Desarrollador de Software con 22 años de edad
                   residente en
                   <span className="text-blue-500 font-semibold"> Colombia</span>
                   , apasionado por la tecnología y el desarrollo de aplicaciones
