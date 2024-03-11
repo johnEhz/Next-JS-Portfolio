@@ -37,7 +37,7 @@ const About = () => {
             <div className="w-full flex justify-center">
               <div className="justify-center max-h-[500px] max-w-[250px] m-auto">
                 <Image
-                  className="bg-green-400 z-0 rounded-lg border border-gray-600"
+                  className="z-0 rounded-lg border border-gray-600"
                   src={aboutImage}
                   alt="John Hernandez"
                   priority
